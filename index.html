@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Time new year</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Brand Name</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <img class="wave" src="curve.png" alt="">
+        <div class="contentBx">
+            <h2>Coming Soon</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, vero porro id iure eligendi harum soluta voluptas sapiente voluptate expedita, tempora, dignissimos tempore veniam.</p>
+            <div class="countdown">
+                <div class="time"><div id="day"></div><span>Days</span></div>
+                <div class="time"><div id="hour"></div><span>Hours</span></div>
+                <div class="time"><div id="minutes"></div><span>Minutes</span></div>
+                <div class="time"><div id="second"></div><span>Seconds</span></div>
+            </div>
+            <a href="#">Notify Me!</a>
+        </div>
+        <div class="imgBx">
+            <img src="man.png" alt="">
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+    var countDate =new Date('jan 1, 2021, 00:00:00').getTime();
+
+    function newYear(){
+        var now = new Date().getTime();
+        gap = countDate - now;
+
+        var second = 1000;
+        var minute = second * 60;
+        var hour = minute * 60;
+        var day = hour * 24;
+
+        var d = Math.floor(gap / (day));
+        var h = Math.floor((gap % (day)) / (hour));
+        var m = Math.floor((gap % (hour)) / (minute));
+        var s = Math.floor((gap % (minute)) / second);
+
+        document.getElementById('day').innerText = d;
+        document.getElementById('hour').innerText = h;
+        document.getElementById('minutes').innerText = m;
+        document.getElementById('second').innerText = s;
+}
+setInterval(function(){
+    newYear();
+},1000)
+    
+    </script>
+</body>
+</html>
+
+
+
+
+
