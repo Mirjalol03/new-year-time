@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Brand Name</a>
+        <a href="#" class="logo">Yangi Yil Vaqti</a>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -18,15 +18,15 @@
     <section>
         <img class="wave" src="curve.png" alt="">
         <div class="contentBx">
-            <h2>Coming Soon</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, vero porro id iure eligendi harum soluta voluptas sapiente voluptate expedita, tempora, dignissimos tempore veniam.</p>
+            <h2>Tez Kunda</h2>
+            <p>Yangi yil — eski yil tugaganidan keyin boshlanadigan navbatdagi yil; eski yilning tugashi va yangi yilning boshlanishi nishonlanadigan kun. Yilning boshlanishi turli xalqlarda har xil vaqtgatoʻgʻri keladi. Koʻpchilik mamlakatlarda, xususan, Yevropa mamlakatlari har yili Yangi yilni milliy bayram sifatida 1-yanvar (Yangi yil kuni) kunida nishonlashadi.</p>
             <div class="countdown">
                 <div class="time"><div id="day"></div><span>Days</span></div>
                 <div class="time"><div id="hour"></div><span>Hours</span></div>
                 <div class="time"><div id="minutes"></div><span>Minutes</span></div>
                 <div class="time"><div id="second"></div><span>Seconds</span></div>
             </div>
-            <a href="#">Notify Me!</a>
+            <a href="#" onclick="toggle();">Menga Eslat</a>
         </div>
         <div class="imgBx">
             <img src="man.png" alt="">
@@ -37,7 +37,34 @@
             <li><a href="#"><img src="instagram.png" alt=""></a></li>
         </ul>
     </section>
+    <div class="newsletter">
+        <h2>Stay Tuned</h2>
+        <p>Get notified at launch</p>
+        <div class="inputBox">
+            <form>
+                <input type="email"  name="" required=""  placeholder="Enter Email Address">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <img src="close.png" class="close" onclick="toggle();">
+    </div>
     <script type="text/javascript">
+
+function toggle(){
+    var newsletter = document.querySelector('.newsletter')
+    newsletter.classList.toggle('active')
+}
+
+
+
+
+
+
+
+
+
+
+
     var countDate =new Date('jan 1, 2021, 00:00:00').getTime();
 
     function newYear(){
@@ -66,8 +93,3 @@ setInterval(function(){
     </script>
 </body>
 </html>
-
-
-
-
-
