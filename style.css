@@ -112,14 +112,193 @@ section .contentBx a {
 
 
 section .imgBx img{
+    position: relative;
     max-width: 500px;
     width: 100%;
     margin-top: 100px;
+    z-index: 2;
 }
 
+ 
 
 .wave {
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+section .sci {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: invert(1);
+}
+section .sci li {
+    list-style: none;
+}
+section .sci li a {
+    display: block;
+    margin-right: 20px;
+    transform: scale(0.8);
+}
+
+.newsletter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    padding: 60px;
+    background: #fff;
+    z-index: 10000;
+    box-shadow: 0 0 0 100vh rgba(49,39,71,0.95);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.newsletter.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.newsletter h2 {
+    font-size: 48px;
+    color: #312747;
+}
+.newsletter p {
+    font-size: 20px;
+    color: #312747;
+}
+
+.newsletter .inputBox{
+    margin-top: 20px;
+}
+
+.newsletter .inputBox input{
+    padding: 10px;
+    outline: none;
+    width: 300px;
+    font-size: 18px;
+    border: 1px solid #999;
+}
+.newsletter .inputBox input[type="submit"]{
+    padding: 10px;
+    outline: none;
+    width: 140px;
+    color:#fff;
+    background: #ff0083;
+    border: 1px solid #ff0083;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.newsletter .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    body{
+        background-image: linear-gradient(#ff5100, #eeea1b);
+    }
+    .newsletter{
+        box-shadow: 0 0 0 100vh rgba(188, 30, 219, 0.801);
+    }
+    
+    section {
+        flex-direction: column;
+        padding: 150px;
+        height: auto;
+    }
+    section .contentBx{
+        max-width: 100%;
+    }
+    section .imgBx img {
+        margin-top: 0;
+    }
+
+    
+    
+}
+
+@media (max-width: 767px) {
+    body{
+        background-image: linear-gradient(#35e761, #23d8d8);
+    }
+    .newsletter{
+        box-shadow: 0 0 0 100vh rgba(39, 224, 178, 0.822);
+    }
+    
+    
+    .header{
+        padding: 20px 50px;
+    }
+    section{
+        flex-direction: column;
+        padding: 150px 20px 50px;
+        height: auto;
+    }
+    section .contentBx h2{
+        font-size: 40px;
+    }
+
+    section .contentBx p{
+        font-size: 20px;
+    }
+
+    section .contentBx .countdown .time{
+        font-size: 30px;
+        min-height: 70px;
+        margin-right: 5px;
+    }
+
+    section .contentBx .countdown .time span {
+        
+        font-size: 14px;
+        
+    }
+
+    section .contentBx a {
+        position: relative;
+        margin-top: 10px;
+        display: inline-block;
+        background: #fff;
+        color: #ff0083;
+        font-size: 16px;
+        letter-spacing: 2px;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 40px;
+    }
+
+    section .sci{
+        left: 50px;
+    }
+    .newsletter{
+        width: 90%;
+        padding: 30px;
+    }
+
+    .newsletter .inputBox input {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .newsletter h2 {
+        font-size: 36px;
+        color: #2bc46a;
+    }
 }
